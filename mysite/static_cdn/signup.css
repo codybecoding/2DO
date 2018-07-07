@@ -1,3 +1,10 @@
+body {
+  background-color: rgb(95, 111, 234);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .main {
   border: 3px rgb(112, 112, 112) solid;
   background-color: #28314e;
@@ -63,6 +70,7 @@ button {
   border: 5px white solid;
   border-radius: 5px;
   margin-bottom: 8px;
+  background-color: white;
 }
 
 #id_username {
@@ -81,4 +89,10 @@ button {
   border-radius: 5px;
   width: 33%;
   margin-right: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main {
+    width: 95%;
+  }
 }

@@ -20,7 +20,6 @@ def TaskView(request):
 
 def add(request):
     if request.method == 'POST':
-        # task = UserTask.objects.filter(user=request.user)
         form = TaskForm(request.POST)
 
         if form.is_valid():

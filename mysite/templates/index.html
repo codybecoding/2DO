@@ -11,13 +11,13 @@
 </head>
 <body>
 
-    
+
       <div id="logout">
         <form method="POST" action="{% url 'logout' %}">
           {% csrf_token %}
-          <ul>
+          <nav>
             <button><li>Logout</li></button>
-          </ul>
+          </nav>
         </form>
       </div>
 
@@ -37,12 +37,13 @@
             <ul>
               {% for obj in object_list %}
               <li><a action="POST" href="{% url 'delete' id=obj.id %}">{{ obj.task }}</a></li>
-              {% endfor %}            
+              {% endfor %}
             </ul>
           </div>
         </section>
       </div>
-    
+
 
 </body>
 </html>
+
