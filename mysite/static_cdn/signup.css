@@ -1,0 +1,84 @@
+.main {
+  border: 3px rgb(112, 112, 112) solid;
+  background-color: #28314e;
+  box-shadow: 5px 5px 5px #00000073;
+  border-radius: 15px;
+  width: 50%;
+  margin: auto;
+  margin-top: 200px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.container {
+  text-align: center;
+  color: white;
+}
+
+.container h1 {
+  color: white;
+}
+
+.current-tasks {
+  margin: 18px;
+  display: block;
+}
+
+.current-tasks ul {
+  margin: 3px;
+  padding: 10px;
+  color: white;
+}
+
+.current-tasks ul li {
+  padding: 3px;
+
+}
+
+.current-tasks h3 {
+  color: white;
+
+}
+
+.current-tasks li a {
+  color: white;
+  text-decoration: none;
+}
+
+.current-tasks li a:hover {
+  background-color: #ffffff;
+
+}
+
+div.container li {
+  display: none;
+}
+
+span {
+  display: none;
+}
+
+button {
+  color: #28314e;
+  border: 5px white solid;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+#id_username {
+  border-radius: 5px;
+  width: 33%;
+  margin-left: 75px;
+}
+
+#id_password1 {
+  border-radius: 5px;
+  width: 33%;
+  margin-left: 78px;
+}
+
+#id_password2 {
+  border-radius: 5px;
+  width: 33%;
+  margin-right: 20px;
+}

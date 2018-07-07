@@ -1,0 +1,60 @@
+body {
+  background-color: rgb(175, 175, 175);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  border: 3px rgb(112, 112, 112) solid;
+  background-color: #28314e;
+  box-shadow: 5px 5px 5px #00000073;
+  border-radius: 15px;
+  width: 40%;
+  margin: auto;
+  margin-top: 200px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.container {
+  text-align: center;
+  color: white;
+}
+
+.container h1 {
+  color: white;
+}
+
+
+button {
+  color: #28314e;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+input {
+  border-radius: 5px;
+  width: 25%;
+}
+
+h1 {
+  color: red;
+}
+
+.errorlist li {
+  display: none;
+}
+
+#id_password {
+  margin-left: 5px;
+}
+
+#signup button {
+  background-color: #28314e;
+  color: #ffffff;
+  border-radius: 10px;
+  width: 100px;
+  height: 50px;
+  list-style-type: none;
+}
