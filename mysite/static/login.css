@@ -3,7 +3,7 @@ html {
 }
 
 body {
-background-color: rgb(95, 111, 234);
+background-color: rgb(255, 255, 255);
 height: 100%;
 margin: 0;
 padding: 0;
@@ -19,6 +19,7 @@ margin: auto;
 margin-top: 200px;
 line-height: 1.5em;
 letter-spacing: 1px;
+max-width: 40%;
 }
 
 .container {
