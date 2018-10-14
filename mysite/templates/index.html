@@ -1,49 +1,36 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Do something</title>
-  <link rel="stylesheet" href="../static/style.css">
-</head>
-<body>
+{% block content %}
+<div id="logout">
+  <form method="POST" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <nav>
+      <button>
+        <li>Logout</li>
+      </button>
+    </nav>
+  </form>
+</div>
 
-
-      <div id="logout">
-        <form method="POST" action="{% url 'logout' %}">
-          {% csrf_token %}
-          <nav>
-            <button><li>Logout</li></button>
-          </nav>
-        </form>
-      </div>
-
-      <div class="main">
-        <section>
-          <div class="container">
-            <h1>#TODO:</h1>
-            <form method="POST" action='{% url 'add' %}' placeholder="Enter Task">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Submit</button>
-            </form>
-          </div>
-          <div class="current-tasks">
-            <h3>Current Tasks:</h3>
-            <h4>#TODO note: click tasks to delete!</h4>
-            <ul>
-              {% for obj in object_list %}
-              <li><a action="POST" href="{% url 'delete' id=obj.id %}">{{ obj.task }}</a></li>
-              {% endfor %}
-            </ul>
-          </div>
-        </section>
-      </div>
-
-
-</body>
-</html>
-
+<div class="main">
+  <section>
+    <div class="container">
+      <h1>#TODO:</h1>
+      <form method="POST" action="{% url 'add' %}" placeholder="Enter Task">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    <div class="current-tasks">
+      <h3>Current Tasks:</h3>
+      <h4>#TODO note: click tasks to delete!</h4>
+      <ul>
+        {% for obj in object_list %}
+        <li><a action="POST" href="{% url 'delete' id=obj.id %}">{{ obj.task }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>
+</div>
+{% endblock %}

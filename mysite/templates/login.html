@@ -1,37 +1,26 @@
-<!-- {% load static %} -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="signup">
+  <form method="POST" action="{% url 'add_user' %}" autocomplete="off">
+    {% csrf_token %}
+    <button>
+      <li>Sign Up</li>
+    </button>
+  </form>
+</div>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>User Login</title>
-  <link rel="stylesheet" href="/static/login.css">
-</head>
-<body>
-
-    <div id="signup">
-        <form method="POST" action="{% url 'add_user' %}" autocomplete="off">
-          {% csrf_token %}
-            <button><li>Sign Up</li></button>
-        </form>
-      </div>
-
-
-    <div class="main">
-      <section>
-        <div class="container">
-          <h1>#TODO: User Login</h1>
-          <form method="POST" action='{% url 'login' %}' placeholder="Enter Task" autocomplete="off">
-          {% csrf_token %}
-          {{ form.as_p }}
-          <button type="submit">Submit</button>
-          </form>
-        </div>
-      </section>
+<div class="main">
+  <section>
+    <div class="container">
+      <h1>#TODO: User Login</h1>
+      <form method="POST" action="{% url 'login' %}" placeholder="Enter Task" autocomplete="off">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+      </form>
     </div>
-
-</body>
-</html>
+  </section>
+</div>
+{% endblock %}
